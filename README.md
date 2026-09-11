@@ -1,3 +1,31 @@
+# Hyreon's Fork of CTR Archipelago
+
+This fork improves the design of the randomizer, and provides more customization options. The main repository is focusing on improving raw capabilities like custom levels, which is the more important task, but I want to make sure the experience is consistently good.
+
+Planned changes to the randomizer include but are not limited to:
+- Trim down the # of boxes when there's filler in the multi-world (box-tighten)
+- Forbid duplicate racers on the racer pad locks (racer-lock-dedupe)
+- Forbid distributing character upgrades until the character is potentially available (progressive-stats-lockgic)
+- Forbid distributing CTR letters until the track is potentially available (lettersanity-lockgic)
+- Plando support for racer pad locks, so that you can assign a racer to a track (racer-lock-plando)
+- Configuration to disable duplicate tracks inside a single cup (cup-track-dedupe)
+- Configuration to set starting and target stats for progressive stats distribution (progressive-stats-config)
+
+Planned changes to the game include but are not limited to:
+- When lettersanity is enabled, the unlocked letters are shown near the pad. The icon is different when a course has letters to touch but can't be complete (lettersanity-progress-counter)
+- Turn on/off USF lock; if off, USF is always available from corresponding USF pads (usf-availability)
+- An alternative logic for boosts; if enabled, you unlock mini-turbos 1, 2, and 3 rather than miniturbos 1-3 + boost pads + items, and then a USF cheat, and then a blue fire cheat (turbo-alternative-logic)
+- Location checks for entering a level, so that we can unlock new items (or traps) upon entering a level (location-enter-track)
+- Make cheats like ignore grass, blue fire, tizi helper configurable as character-unique (cheats-character-unique)
+- Add team pad locks beside racer pad locks, so that a level could be locked behind say any one of the four racers Crash, Coco, Polar and Pura (racer-lock-team-based)
+- An option to turn character lives into items, rather than single unlockables. Character lives are lost when you win, lose or exit a track. If you have 0 lives, you get 1 life for each unlocked character and trigger a deathlink (character-lives)
+- Item config: you can turn on/off items that you've picked up, with a limited number of item locks available (item-inventory-screen)
+
+Much like the original project, this uses AI-assisted development.
+
+- For the original repository, see [here](https://github.com/dowlle/ctr-native-ap).
+- To see my other work, including my Steam game Little Blue, visit [my personal website](https://hyreon.top).
+
 # CTR Archipelago (ctr-native-ap)
 
 Play **Crash Team Racing (PS1, 1999)** as an [Archipelago](https://archipelago.gg) multiworld randomizer, natively on your PC. This is a native port of the game, built on the [CTR-native](https://github.com/CTR-tools/ctr-native) decompilation, with the Archipelago client integrated directly into it: no emulator and no ROM patching. It connects to the server, receives items, changes progression and access throughout Adventure Mode, and sends your location checks and goal.
